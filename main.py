@@ -5,6 +5,8 @@ from PySide6.QtWidgets import QApplication
 from model.pelican_model import PelicanModel
 from view.pelican_window import PelicanWindow
 from controller.pelican_controller import PelicanController
+from pathlib import Path
+from PySide6.QtGui import QIcon
 
 
 def main():
@@ -14,6 +16,10 @@ def main():
     window = PelicanWindow()
 
     controller = PelicanController(window, model)
+
+    icon_path = Path(__file__).resolve().parent / "assets" / "pelican.png"
+
+    window.setWindowIcon(QIcon(str(icon_path)))
 
     window.show()
 
