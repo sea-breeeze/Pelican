@@ -1,0 +1,7 @@
+PySide6
+mss
+Pillow
+PyWinCtl
+uiautomation
+openai
+python-dotenv
